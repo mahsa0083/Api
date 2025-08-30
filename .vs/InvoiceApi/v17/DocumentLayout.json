@@ -1,0 +1,201 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\ilia\\InvoiceApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|e:\\ilia\\invoiceapi\\invoiceapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|solutionrelative:invoiceapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|e:\\ilia\\invoiceapi\\invoiceapi\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|solutionrelative:invoiceapi\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|e:\\ilia\\invoiceapi\\invoiceapi\\repository\\reposervices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|solutionrelative:invoiceapi\\repository\\reposervices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|e:\\ilia\\invoiceapi\\invoiceapi\\modal\\entities\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|solutionrelative:invoiceapi\\modal\\entities\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|e:\\ilia\\invoiceapi\\invoiceapi\\dtos\\invoiceupdatedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|solutionrelative:invoiceapi\\dtos\\invoiceupdatedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|e:\\ilia\\invoiceapi\\invoiceapi\\dtos\\invoicecreatedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|solutionrelative:invoiceapi\\dtos\\invoicecreatedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|e:\\ilia\\invoiceapi\\invoiceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|solutionrelative:invoiceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|e:\\ilia\\invoiceapi\\invoiceapi\\dtos\\invoicereaddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|solutionrelative:invoiceapi\\dtos\\invoicereaddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|e:\\ilia\\invoiceapi\\invoiceapi\\modal\\entities\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|solutionrelative:invoiceapi\\modal\\entities\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|e:\\ilia\\invoiceapi\\invoiceapi\\modal\\database\\invoicedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|solutionrelative:invoiceapi\\modal\\database\\invoicedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|e:\\ilia\\invoiceapi\\invoiceapi\\mapper\\profilemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{543FB26E-A056-4EA6-949B-67FAFC4229D1}|InvoiceApi\\InvoiceApi.csproj|solutionrelative:invoiceapi\\mapper\\profilemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InvoiceUpdateDTOs.cs",
+              "DocumentMoniker": "E:\\ilia\\InvoiceApi\\InvoiceApi\\DTOs\\InvoiceUpdateDTOs.cs",
+              "RelativeDocumentMoniker": "InvoiceApi\\DTOs\\InvoiceUpdateDTOs.cs",
+              "ToolTip": "E:\\ilia\\InvoiceApi\\InvoiceApi\\DTOs\\InvoiceUpdateDTOs.cs",
+              "RelativeToolTip": "InvoiceApi\\DTOs\\InvoiceUpdateDTOs.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T21:33:56.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Invoice.cs",
+              "DocumentMoniker": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Modal\\Entities\\Invoice.cs",
+              "RelativeDocumentMoniker": "InvoiceApi\\Modal\\Entities\\Invoice.cs",
+              "ToolTip": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Modal\\Entities\\Invoice.cs",
+              "RelativeToolTip": "InvoiceApi\\Modal\\Entities\\Invoice.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAmwAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T21:00:07.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "InvoiceApi\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "InvoiceApi\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAjwEMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T20:23:21.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InvoiceCreateDTOs.cs",
+              "DocumentMoniker": "E:\\ilia\\InvoiceApi\\InvoiceApi\\DTOs\\InvoiceCreateDTOs.cs",
+              "RelativeDocumentMoniker": "InvoiceApi\\DTOs\\InvoiceCreateDTOs.cs",
+              "ToolTip": "E:\\ilia\\InvoiceApi\\InvoiceApi\\DTOs\\InvoiceCreateDTOs.cs",
+              "RelativeToolTip": "InvoiceApi\\DTOs\\InvoiceCreateDTOs.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T20:59:11.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Program.cs",
+              "RelativeDocumentMoniker": "InvoiceApi\\Program.cs",
+              "ToolTip": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Program.cs",
+              "RelativeToolTip": "InvoiceApi\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T20:37:42.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Repository\\IRepository.cs",
+              "RelativeDocumentMoniker": "InvoiceApi\\Repository\\IRepository.cs",
+              "ToolTip": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Repository\\IRepository.cs",
+              "RelativeToolTip": "InvoiceApi\\Repository\\IRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T21:00:10.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RepoServices.cs",
+              "DocumentMoniker": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Repository\\RepoServices.cs",
+              "RelativeDocumentMoniker": "InvoiceApi\\Repository\\RepoServices.cs",
+              "ToolTip": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Repository\\RepoServices.cs",
+              "RelativeToolTip": "InvoiceApi\\Repository\\RepoServices.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAuwBsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T21:00:21.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InvoiceReadDTOs.cs",
+              "DocumentMoniker": "E:\\ilia\\InvoiceApi\\InvoiceApi\\DTOs\\InvoiceReadDTOs.cs",
+              "RelativeDocumentMoniker": "InvoiceApi\\DTOs\\InvoiceReadDTOs.cs",
+              "ToolTip": "E:\\ilia\\InvoiceApi\\InvoiceApi\\DTOs\\InvoiceReadDTOs.cs",
+              "RelativeToolTip": "InvoiceApi\\DTOs\\InvoiceReadDTOs.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T20:59:23.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InvoiceItem.cs",
+              "DocumentMoniker": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Modal\\Entities\\InvoiceItem.cs",
+              "RelativeDocumentMoniker": "InvoiceApi\\Modal\\Entities\\InvoiceItem.cs",
+              "ToolTip": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Modal\\Entities\\InvoiceItem.cs",
+              "RelativeToolTip": "InvoiceApi\\Modal\\Entities\\InvoiceItem.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T21:01:07.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InvoiceDataBase.cs",
+              "DocumentMoniker": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Modal\\DataBase\\InvoiceDataBase.cs",
+              "RelativeDocumentMoniker": "InvoiceApi\\Modal\\DataBase\\InvoiceDataBase.cs",
+              "ToolTip": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Modal\\DataBase\\InvoiceDataBase.cs",
+              "RelativeToolTip": "InvoiceApi\\Modal\\DataBase\\InvoiceDataBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T21:00:05.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProfileMapper.cs",
+              "DocumentMoniker": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Mapper\\ProfileMapper.cs",
+              "RelativeDocumentMoniker": "InvoiceApi\\Mapper\\ProfileMapper.cs",
+              "ToolTip": "E:\\ilia\\InvoiceApi\\InvoiceApi\\Mapper\\ProfileMapper.cs",
+              "RelativeToolTip": "InvoiceApi\\Mapper\\ProfileMapper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T20:38:25.939Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
