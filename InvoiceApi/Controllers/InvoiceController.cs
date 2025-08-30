@@ -1,82 +1,89 @@
-﻿using InvoiceApi.DTOs;
-using InvoiceApi.Mapper;
+﻿using InvoiceApi.Mapper;
 using InvoiceApi.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using InvoiceApi.Modal.Entities;
+using InvoiceApi.DTOs.Invoice;
 
 namespace InvoiceApi.Controllers
 {
-    [Route("api/HomeController")]
+    [Route("api/InvoiceController")]
     [ApiController]
-    public class HomeController : ControllerBase
+    public class InvoiceController : ControllerBase
     {
         private readonly IRepository _repo;
         private readonly IMapper _mapper;
-        public HomeController(IRepository repo, IMapper mapper)
+        public InvoiceController(IRepository repo, IMapper mapper)
         {
             _repo = repo;
             _mapper = mapper;
         }
         [HttpGet]
-        public async Task<ActionResult <IEnumerable<InvoiceReadDTOs>>> GetAll()
+        public async Task<ActionResult<IEnumerable<InvoiceReadDTOs>>> GetAll()
         {
 
             var invoiceEntities = _repo.GetAll();
 
 
-            var invoiceDtos =_mapper.Map < IEnumerable<InvoiceReadDTOs>>(invoiceEntities);
+            var invoiceDtos = _mapper.Map<IEnumerable<InvoiceReadDTOs>>(invoiceEntities);
             return Ok(invoiceDtos);
         }
-        
-        [HttpGet("{id}", Name = "GetById")]
+
+        [HttpGet("id",Name = "GetById")]
         public ActionResult<InvoiceReadDTOs> GetById(int id)
         {
-            var FindInvoice=_repo.GetById(id);
-            if(FindInvoice != null)
+            var FindInvoice = _repo.GetById(id);
+            if (FindInvoice != null)
             {
                 return Ok(_mapper.Map<InvoiceReadDTOs>(FindInvoice));
             }
             return NotFound();
         }
         [HttpPost]
-        public async Task<ActionResult<InvoiceReadDTOs>> CreateUser(InvoiceCreateDTOs item)
+        public async Task<ActionResult<InvoiceReadDTOs>> CreateInvoice(InvoiceCreateDTOs item)
         {
             var model = _mapper.Map<Invoice>(item);
+            if (item != null)
+            {
+                _repo.CreateInvoice(model);
+                _repo.SaveChanges();
+                var ReadDTo = _mapper.Map<InvoiceReadDTOs>(model); 
 
-            _repo.CreateInvoice(model);
-            _repo.SaveChanges();
+                return CreatedAtRoute("GetById", new { id = ReadDTo.Id }, ReadDTo);
+            }
 
-            var ReadDTo = _mapper.Map<InvoiceReadDTOs>(model);
-
-            return CreatedAtRoute("GetById", new { id = ReadDTo.Id }, ReadDTo);
+            else
+            {
+                return NoContent();
+            }
+           
 
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("id")]
         public ActionResult UpdateInvoice(int id, InvoiceUpdateDTOs item)
         {
-            var model =  _repo.GetById(id);
+            var model = _repo.GetById(id);
 
             if (model == null)
             {
                 return NotFound();
             }
-            
 
-            _mapper.Map( model,item);
 
-            _repo.SaveChanges();
+            _mapper.Map(item,model);
+
+       
 
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("id")]
 
         public ActionResult DeleteInvoice(int id)
         {
-            var item= _repo.GetById(id);
+            var item = _repo.GetById(id);
 
             if (item == null)
             {
@@ -84,7 +91,7 @@ namespace InvoiceApi.Controllers
             }
 
             _repo.Delete(item);
-             _repo.SaveChanges();
+            _repo.SaveChanges();
 
             return NoContent();
         }

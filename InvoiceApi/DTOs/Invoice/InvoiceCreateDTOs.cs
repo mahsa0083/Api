@@ -1,7 +1,12 @@
-﻿namespace InvoiceApi.DTOs
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
+
+namespace InvoiceApi.DTOs.Invoice
 {
     public class InvoiceCreateDTOs
     {
+
+        
         public int Id { get; set; }
 
         public int InvoiceNumber { get; set; }
@@ -19,12 +24,6 @@
 
         public string Statues { get; set; }
 
-        public int ItemId { get; set; }
 
-        public string ProductName { get; set; }
-        public int Quantity { get; set; }
-        public decimal UnitPrice { get; set; }
-        public decimal SubTotal { get; set; }
-        public int InvoiceFk { get; set; }
     }
 }
