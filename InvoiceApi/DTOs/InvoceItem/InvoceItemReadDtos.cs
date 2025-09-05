@@ -6,12 +6,12 @@ namespace InvoiceApi.DTOs.InvoceItem
     public class InvoceItemReadDtos
     {
         public int ItemId { get; set; }
-        public string ProductName { get; set; }
+        public int ProductName { get; set; }
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
-        public decimal SubTotal { get; set; }
+       
 
         [ForeignKey(nameof(Invoice))]
-        public int InvoiceFk { get; set; }
+        public int InvoiceId { get; set; }
     }
 }

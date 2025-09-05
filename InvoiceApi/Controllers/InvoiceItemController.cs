@@ -44,12 +44,12 @@ namespace InvoiceApi.Controllers
         {
             if (item == null)
             {
-                throw new ArgumentNullException(nameof(item), "Its Empty ");
+                throw new ArgumentNullException(nameof(item));
             }
             var model = _mapper.Map<InvoiceItem>(item);
             if (model == null)
             {
-                 throw new ArgumentException(nameof(item),"cannot able to mapped");
+                 throw new ArgumentException(nameof(item));
             }
            
                 _repo.CreateInvoiceItem(model);
@@ -85,7 +85,7 @@ namespace InvoiceApi.Controllers
             _repo.DeleteInvoiceItem(item);
             
 
-            return NoContent();
+            return Ok();
         }
 
     }

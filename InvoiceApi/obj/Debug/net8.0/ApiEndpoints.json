@@ -111,7 +111,7 @@
   {
     "ContainingType": "InvoiceApi.Controllers.InvoiceItemController",
     "Method": "GetAllItems",
-    "RelativePath": "api/InvoiceItemController",
+    "RelativePath": "api/InvoiceItem",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -131,7 +131,7 @@
   {
     "ContainingType": "InvoiceApi.Controllers.InvoiceItemController",
     "Method": "CreateItems",
-    "RelativePath": "api/InvoiceItemController",
+    "RelativePath": "api/InvoiceItem",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -142,22 +142,12 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "InvoiceApi.DTOs.InvoceItem.InvoceItemReadDtos",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "InvoiceApi.Controllers.InvoiceItemController",
     "Method": "GetItemById",
-    "RelativePath": "api/InvoiceItemController/id",
+    "RelativePath": "api/InvoiceItem/id",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -183,7 +173,7 @@
   {
     "ContainingType": "InvoiceApi.Controllers.InvoiceItemController",
     "Method": "UpdateInvoiceItems",
-    "RelativePath": "api/InvoiceItemController/id",
+    "RelativePath": "api/InvoiceItem/id",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -204,7 +194,7 @@
   {
     "ContainingType": "InvoiceApi.Controllers.InvoiceItemController",
     "Method": "DeleteInvoiceItems",
-    "RelativePath": "api/InvoiceItemController/id",
+    "RelativePath": "api/InvoiceItem/id",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

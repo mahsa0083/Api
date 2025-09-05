@@ -1,5 +1,6 @@
 ﻿using InvoiceApi.Modal.DataBase;
 using InvoiceApi.Modal.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace InvoiceApi.Repository
@@ -54,7 +55,7 @@ namespace InvoiceApi.Repository
         public IEnumerable<InvoiceItem> GetAllitems()
         {
             if (context == null)
-                throw new Exception("No value exsit");
+                throw new ArgumentException("No value exsit");
             return context.invoiceItems.ToList();
         }
 
@@ -90,10 +91,11 @@ namespace InvoiceApi.Repository
 
 
 
-            model.UnitPrice = item.UnitPrice;
-            model.Quantity = item.Quantity;
-            model.ProductName = item.ProductName;
-            model.InvoiceFk = item.InvoiceFk;
+            //model.UnitPrice = item.UnitPrice;
+            //model.Quantity = item.Quantity;
+            //model.ProductName = item.ProductName;
+            //model.InvoiceId = item.InvoiceId;
+            context.Entry(item).State = EntityState.Modified;
             context.SaveChanges();
             return true;
         }

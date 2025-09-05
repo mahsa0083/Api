@@ -33,20 +33,18 @@ namespace InvoiceApi.Migrations
                     b.Property<int?>("CustomerId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("DueDate")
+                    b.Property<DateTime>("IncvoiceCreateAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("InvoiceDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("InvoiceNumber")
-                        .HasMaxLength(100)
-                        .HasColumnType("int");
-
-                    b.Property<string>("Statues")
+                    b.Property<string>("InvoiceNumber")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("InvoicePaymentAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Statues")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("TotalAmount")
                         .HasColumnType("decimal(18,2)");
@@ -59,25 +57,27 @@ namespace InvoiceApi.Migrations
             modelBuilder.Entity("InvoiceApi.Modal.Entities.InvoiceItem", b =>
                 {
                     b.Property<int>("ItemId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("InvoiceFk")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ItemId"));
+
+                    b.Property<int>("InvoiceId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ProductName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("ProductName")
+                        .HasColumnType("int");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
-
-                    b.Property<decimal>("SubTotal")
-                        .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("UnitPrice")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("ItemId");
+
+                    b.HasIndex("InvoiceId")
+                        .IsUnique();
 
                     b.ToTable("invoiceItems");
                 });
@@ -86,7 +86,7 @@ namespace InvoiceApi.Migrations
                 {
                     b.HasOne("InvoiceApi.Modal.Entities.Invoice", "Invoice")
                         .WithOne("InvoiceItem")
-                        .HasForeignKey("InvoiceApi.Modal.Entities.InvoiceItem", "ItemId")
+                        .HasForeignKey("InvoiceApi.Modal.Entities.InvoiceItem", "InvoiceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

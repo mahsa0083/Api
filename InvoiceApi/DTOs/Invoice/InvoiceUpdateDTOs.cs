@@ -1,4 +1,6 @@
-﻿namespace InvoiceApi.DTOs.Invoice
+﻿using InvoiceApi.Repository;
+
+namespace InvoiceApi.DTOs.Invoice
 {
     public class InvoiceUpdateDTOs
     {
@@ -17,7 +19,7 @@
 
         public decimal TotalAmount { get; set; }
 
-        public string Statues { get; set; }
+        public CheckStatusValue Statues { get; set; }
 
 
     }

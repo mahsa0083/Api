@@ -8,6 +8,7 @@ using InvoiceApi.DTOs.Invoice;
 
 using FluentValidation.AspNetCore;
 using InvoiceApi.Modal.Entities;
+using InvoiceApi;
 
 internal class Program
 {
@@ -25,6 +26,8 @@ internal class Program
         builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
         builder.Services.AddScoped<IRepositoryInvoice, RepoInvoiceServices>();
+        builder.Services.AddScoped<IRepositoryInvoiceItem, RepoInvoiceItemService>();
+
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
       
@@ -40,6 +43,7 @@ internal class Program
         }
 
         app.UseHttpsRedirection();
+        app.UseMiddleware<ExceptionMiddleWare>();
 
         app.UseAuthorization();
 

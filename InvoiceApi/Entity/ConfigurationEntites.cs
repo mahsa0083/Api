@@ -11,7 +11,12 @@ namespace InvoiceApi.Entity
             modelBuilder.Entity<Invoice>()
                 .HasOne(u => u.InvoiceItem)
                 .WithOne(up => up.Invoice)
-                .HasForeignKey<InvoiceItem>(up => up.InvoiceFk);
+                .HasForeignKey<InvoiceItem>(up => up.InvoiceId);
+
+
+            modelBuilder.Entity<Invoice>()
+        .Property(i => i.Statues)
+        .HasConversion<string>();
 
             modelBuilder.Entity<Invoice>(entity =>
             {
@@ -43,7 +48,7 @@ namespace InvoiceApi.Entity
                 .IsRequired();
                 entity.Property(s => s.UnitPrice)
                   .IsRequired();
-                entity.Property(s => s.InvoiceFk)
+                entity.Property(s => s.InvoiceId)
                 .IsRequired();
 
 

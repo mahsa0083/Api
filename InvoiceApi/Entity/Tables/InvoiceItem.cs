@@ -8,20 +8,17 @@ namespace InvoiceApi.Modal.Entities
         [Key]
         public int ItemId { get; set; }
 
-        [Required]
         public int ProductName { get; set; }
 
-        [Required]
         public int Quantity { get; set; }
 
-        [Required]
-        [DataType("decimal,(18,4)")]
+
         
         public decimal UnitPrice { get; set; }
 
  
 
-         public int InvoiceFk {  get; set; }
+         public int InvoiceId {  get; set; }
         public  Invoice Invoice { get; set; }
 
     }

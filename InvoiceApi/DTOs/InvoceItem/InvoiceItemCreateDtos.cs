@@ -8,7 +8,7 @@ namespace InvoiceApi.DTOs.InvoceItem
         public int ItemId { get; set; }
 
     
-        public string ProductName { get; set; }
+        public int ProductName { get; set; }
 
 
         public int Quantity { get; set; }
@@ -18,17 +18,10 @@ namespace InvoiceApi.DTOs.InvoceItem
 
   
         //calculate the cost of Product
-        private decimal _subtotal
-        {
-            get;
-            set;
-        }
-  
-        public  decimal SubTotal {get; set; }
-
+       
 
         [ForeignKey(nameof(Invoice))]
-        public int InvoiceFk { get; set; }
+        public int InvoiceId { get; set; }
 
 
     }

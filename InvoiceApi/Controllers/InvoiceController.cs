@@ -47,7 +47,6 @@ namespace InvoiceApi.Controllers
             if (item != null)
             {
                 _repo.CreateInvoice(model);
-                _repo.SaveChanges();
                 var ReadDTo = _mapper.Map<InvoiceReadDTOs>(model); 
 
                 return CreatedAtRoute("GetById", new { id = ReadDTo.Id }, ReadDTo);
@@ -91,7 +90,6 @@ namespace InvoiceApi.Controllers
             }
 
             _repo.Delete(item);
-            _repo.SaveChanges();
 
             return NoContent();
         }

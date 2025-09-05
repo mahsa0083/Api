@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using InvoiceApi.Repository;
+using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
 namespace InvoiceApi.DTOs.Invoice
@@ -22,7 +23,7 @@ namespace InvoiceApi.DTOs.Invoice
 
         public decimal TotalAmount { get; set; }
 
-        public string Statues { get; set; }
+        public CheckStatusValue Statues { get; set; }
 
 
     }
