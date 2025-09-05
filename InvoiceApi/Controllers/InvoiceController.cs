@@ -12,9 +12,9 @@ namespace InvoiceApi.Controllers
     [ApiController]
     public class InvoiceController : ControllerBase
     {
-        private readonly IRepository _repo;
+        private readonly IRepositoryInvoice _repo;
         private readonly IMapper _mapper;
-        public InvoiceController(IRepository repo, IMapper mapper)
+        public InvoiceController(IRepositoryInvoice repo, IMapper mapper)
         {
             _repo = repo;
             _mapper = mapper;

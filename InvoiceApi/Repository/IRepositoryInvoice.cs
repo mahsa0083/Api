@@ -1,0 +1,19 @@
+﻿using InvoiceApi.Modal.Entities;
+
+namespace InvoiceApi.Repository
+{
+    public interface IRepositoryInvoice
+    {
+        #region Invoice
+        IEnumerable<Invoice> GetAll();
+        Invoice GetById(int id);
+        void CreateInvoice(Invoice invoice);
+        void Update(Invoice invoice);
+        void Delete(Invoice invoice);
+        #endregion
+
+      
+
+
+    }
+}

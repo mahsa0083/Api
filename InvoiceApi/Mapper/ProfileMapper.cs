@@ -17,15 +17,22 @@ namespace InvoiceApi.Mapper
             CreateMap<Invoice, InvoiceUpdateDTOs>();
             CreateMap<Invoice, InvoiceUpdateDTOs>().ReverseMap();
             CreateMap<Invoice, InvoiceCreateDTOs>().ReverseMap();
+
+
+
             CreateMap<InvoiceItem, InvoceItemReadDtos>()
-                 .ForMember(d => d.Id, opt => opt.Ignore());
+                 .ForMember(d => d.ItemId, opt => opt.Ignore());
 
-            CreateMap<Invoice, InvoceItemReadDtos>()
-                .ForMember(d => d.Id, opt => opt.Ignore());
-            CreateMap<Invoice, InvoceItemUpdateDtos>().ReverseMap()
-                                .ForMember(d => d.Id, opt => opt.Ignore());
+            CreateMap<InvoiceItem, InvoiceItemCreateDtos>()
+                .ForMember(d => d.ItemId, opt => opt.Ignore());
+            CreateMap<InvoiceItem, InvoceItemReadDtos>().ReverseMap();
+            CreateMap<InvoiceItem, InvoceItemUpdateDtos>();
+            CreateMap<InvoiceItem, InvoceItemUpdateDtos>().ReverseMap();
+            CreateMap<InvoiceItem, InvoiceItemCreateDtos>().ReverseMap();
 
-            CreateMap<Invoice, InvoiceItemCreateDtos>().ReverseMap();
+
+
+
 
 
         }

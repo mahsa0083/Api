@@ -145,3 +145,6 @@ E:\ilia\InvoiceApi\InvoiceApi\obj\Debug\net8.0\ref\InvoiceApi.dll
 E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\AutoMapper.dll
 E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 E:\ilia\InvoiceApi\InvoiceApi\obj\Debug\net8.0\InvoiceApi.sourcelink.json
+E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\FluentValidation.dll
+E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\FluentValidation.AspNetCore.dll

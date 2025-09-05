@@ -8,32 +8,31 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InvoiceApi.Controllers
 {
-    [Route("api/InvoiceItemController")]
+    [Route("api/InvoiceItem")]
     [ApiController]
     public class InvoiceItemController : ControllerBase
     {
-        private readonly IRepository _repo;
+        private readonly IRepositoryInvoiceItem _repo;
         private readonly IMapper _mapper;
-        public InvoiceItemController(IRepository repo, IMapper mapper)
+
+        public InvoiceItemController(IRepositoryInvoiceItem repo, IMapper mapper)
         {
             _repo = repo;
             _mapper = mapper;
         }
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<InvoceItemReadDtos>>> GetAllItems()
+        public ActionResult<IEnumerable<InvoceItemReadDtos>> GetAllItems()
         {
 
-            var invoiceEntities = _repo.GetAll();
-
-
+            var invoiceEntities = _repo.GetAllitems();
             var invoiceDtos = _mapper.Map<IEnumerable<InvoceItemReadDtos>>(invoiceEntities);
             return Ok(invoiceDtos);
         }
 
-        [HttpGet("id", Name = "GetItemById")]
+        [HttpGet("id")]
         public ActionResult<InvoceItemReadDtos> GetItemById(int id)
         {
-            var FindInvoice = _repo.GetById(id);
+            var FindInvoice = _repo.GetitemById(id);
             if (FindInvoice != null)
             {
                 return Ok(_mapper.Map<InvoceItemReadDtos>(FindInvoice));
@@ -41,50 +40,50 @@ namespace InvoiceApi.Controllers
             return NotFound();
         }
         [HttpPost]
-        public async Task<ActionResult<InvoceItemReadDtos>> CreateItems(InvoiceItemCreateDtos item)
+        public ActionResult CreateItems(InvoiceItemCreateDtos item)
         {
-            var model = _mapper.Map<Invoice>(item);
+            if (item == null)
+            {
+                throw new ArgumentNullException(nameof(item), "Its Empty ");
+            }
+            var model = _mapper.Map<InvoiceItem>(item);
+            if (model == null)
+            {
+                 throw new ArgumentException(nameof(item),"cannot able to mapped");
+            }
+           
+                _repo.CreateInvoiceItem(model);
+                return Ok();
+            
 
-            _repo.CreateInvoice(model);
-            _repo.SaveChanges();
-
-            var ReadDTo = _mapper.Map<InvoiceItemCreateDtos>(model);
-
-            return CreatedAtRoute("GetById", new { id = ReadDTo.ItemId}, ReadDTo);
 
         }
 
         [HttpPut("id")]
         public ActionResult UpdateInvoiceItems(int id, InvoiceItemCreateDtos item)
         {
-            var model = _repo.GetById(id);
-
-            if (model == null)
+            var MappedModel=_mapper.Map<InvoiceItem>(item);
+            var model = _repo.UpdateInvoiceItem(MappedModel, id);
+            if (model == false)
             {
-                return NotFound();
+                throw new ArgumentException(nameof(item), "it cannot updated");
             }
-
-
-            _mapper.Map(model, item);
-
-            _repo.SaveChanges();
-
-            return NoContent();
+            return Ok();
         }
 
         [HttpDelete("id")]
 
         public ActionResult DeleteInvoiceItems(int id)
         {
-            var item = _repo.GetById(id);
+            var item = _repo.GetitemById(id);
 
             if (item == null)
             {
                 return NotFound();
             }
 
-            _repo.Delete(item);
-            _repo.SaveChanges();
+            _repo.DeleteInvoiceItem(item);
+            
 
             return NoContent();
         }

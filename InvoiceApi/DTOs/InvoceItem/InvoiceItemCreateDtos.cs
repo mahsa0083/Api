@@ -7,28 +7,28 @@ namespace InvoiceApi.DTOs.InvoceItem
     {
         public int ItemId { get; set; }
 
-        [Required]
+    
         public string ProductName { get; set; }
 
-        [Required]
+
         public int Quantity { get; set; }
 
-        [Required]
-        [DataType("decimal,(18,4)")]
 
         public decimal UnitPrice { get; set; }
 
-        [Required]
-        [DataType("decimal,(18,4)")]
+  
         //calculate the cost of Product
         private decimal _subtotal
         {
             get;
             set;
         }
-        [Required]
-        [DataType("decimal,(18,4)")]
+  
         public  decimal SubTotal {get; set; }
+
+
+        [ForeignKey(nameof(Invoice))]
+        public int InvoiceFk { get; set; }
 
 
     }
