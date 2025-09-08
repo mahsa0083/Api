@@ -13,18 +13,28 @@ namespace InvoiceApi.Controllers
     public class InvoiceController : ControllerBase
     {
         private readonly IRepositoryInvoice _repo;
+        private readonly IRepositoryInvoiceItem _item;
         private readonly IMapper _mapper;
-        public InvoiceController(IRepositoryInvoice repo, IMapper mapper)
+        public InvoiceController(IRepositoryInvoice repo, IMapper mapper , IRepositoryInvoiceItem item)
         {
             _repo = repo;
             _mapper = mapper;
+            _item = item;
         }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<InvoiceReadDTOs>>> GetAll()
         {
-
+            
             var invoiceEntities = _repo.GetAll();
-
+            for(int i= 0; i <= invoiceEntities.Count; i++)
+            {
+                invoiceEntities[i].TotalAmount = _item.CalculatePrice(invoiceEntities[i].Id);
+                
+            }
+            if(invoiceEntities.Count > 0) 
+            {
+                throw new ArgumentException(nameof(invoiceEntities));
+            }
 
             var invoiceDtos = _mapper.Map<IEnumerable<InvoiceReadDTOs>>(invoiceEntities);
             return Ok(invoiceDtos);
@@ -36,8 +46,10 @@ namespace InvoiceApi.Controllers
             var FindInvoice = _repo.GetById(id);
             if (FindInvoice != null)
             {
+                FindInvoice.TotalAmount = _item.CalculatePrice(id);
                 return Ok(_mapper.Map<InvoiceReadDTOs>(FindInvoice));
             }
+            
             return NotFound();
         }
         [HttpPost]
@@ -47,6 +59,9 @@ namespace InvoiceApi.Controllers
             if (item != null)
             {
                 _repo.CreateInvoice(model);
+                model.TotalAmount = _item.CalculatePrice(model.Id);
+
+
                 var ReadDTo = _mapper.Map<InvoiceReadDTOs>(model); 
 
                 return CreatedAtRoute("GetById", new { id = ReadDTo.Id }, ReadDTo);

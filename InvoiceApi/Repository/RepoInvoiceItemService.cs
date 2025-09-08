@@ -13,22 +13,27 @@ namespace InvoiceApi.Repository
             context = _context;
                 
         }
-        public int CalculatePrice(InvoiceItem item)
+
+        public int CalculatePrice(int id)
         {
-            if (item.Quantity <= 0 || item.Quantity == null)
+            var finded = context.invoiceItems.Where(p => p.InvoiceId == id).SingleOrDefault();
+            if (finded == null)
             {
-                throw new ArgumentException(nameof(item), "Quntity Cant be ZERO Or NULL");
+                throw new ArgumentException(nameof(finded), "Quntity Cant be ZERO Or NULL");
+
             }
-            if (item.UnitPrice <= 0 || item.UnitPrice == null)
-                throw new ArgumentException(nameof(item), "Quntity Cant be ZERO Or NULL");
+            if (finded.Quantity <= 0 || finded.Quantity == null)
+            {
+                throw new ArgumentException(nameof(finded), "Quntity Cant be ZERO Or NULL");
+            }
+            if (finded.UnitPrice <= 0 || finded.UnitPrice == null)
+                throw new ArgumentException(nameof(finded), "Quntity Cant be ZERO Or NULL");
 
 
-            var TotalPrice = item.Quantity * item.UnitPrice;
+            var TotalPrice = finded.Quantity * finded.UnitPrice;
             int ConvertedPrice = Convert.ToInt32(TotalPrice);
             return ConvertedPrice;
         }
-
-        
 
         public void CreateInvoiceItem(InvoiceItem item)
         {
@@ -79,15 +84,15 @@ namespace InvoiceApi.Repository
 
             if (item == null)
             {
-                throw new Exception("Please Fill the Fields");
+                throw new ArgumentException("item","Please Fill the Fields");
                 
             }
-            var model = context.invoiceItems.SingleOrDefault(u => u.ItemId == id);
+            //var model = context.invoiceItems.SingleOrDefault(u => u.ItemId == id);
 
-            if (model == null)
-            {
-                throw new Exception("No Entites Find With this ID");
-            }
+            //if (model == null)
+            //{
+            //    throw new ArgumentException("item","No Entites Find With this ID");
+            //}
 
 
 

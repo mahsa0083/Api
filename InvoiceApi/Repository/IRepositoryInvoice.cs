@@ -4,13 +4,13 @@ namespace InvoiceApi.Repository
 {
     public interface IRepositoryInvoice
     {
-        #region Invoice
-        IEnumerable<Invoice> GetAll();
+        List<Invoice> GetAll();
         Invoice GetById(int id);
         void CreateInvoice(Invoice invoice);
         void Update(Invoice invoice);
         void Delete(Invoice invoice);
-        #endregion
+        
+        
 
       
 

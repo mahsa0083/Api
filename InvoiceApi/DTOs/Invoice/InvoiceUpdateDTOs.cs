@@ -19,7 +19,7 @@ namespace InvoiceApi.DTOs.Invoice
 
         public decimal TotalAmount { get; set; }
 
-        public CheckStatusValue Statues { get; set; }
+        public CheckStatusValue Status { get; set; }
 
 
     }

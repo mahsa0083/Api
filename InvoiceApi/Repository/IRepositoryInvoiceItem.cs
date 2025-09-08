@@ -10,6 +10,6 @@ namespace InvoiceApi.Repository
         bool UpdateInvoiceItem(InvoiceItem item, int id);
         bool DeleteInvoiceItem(InvoiceItem item);
         
-        int CalculatePrice(InvoiceItem item);
+        int CalculatePrice( int id);
     }
 }

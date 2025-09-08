@@ -1,0 +1,210 @@
+[
+  {
+    "ContainingType": "InvoiceApi.Controllers.InvoiceController",
+    "Method": "GetAll",
+    "RelativePath": "api/InvoiceController",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[InvoiceApi.DTOs.Invoice.InvoiceReadDTOs, InvoiceApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceApi.Controllers.InvoiceController",
+    "Method": "CreateInvoice",
+    "RelativePath": "api/InvoiceController",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "item",
+        "Type": "InvoiceApi.DTOs.Invoice.InvoiceCreateDTOs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "InvoiceApi.DTOs.Invoice.InvoiceReadDTOs",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceApi.Controllers.InvoiceController",
+    "Method": "GetById",
+    "RelativePath": "api/InvoiceController/id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "InvoiceApi.DTOs.Invoice.InvoiceReadDTOs",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceApi.Controllers.InvoiceController",
+    "Method": "UpdateInvoice",
+    "RelativePath": "api/InvoiceController/id",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "item",
+        "Type": "InvoiceApi.DTOs.Invoice.InvoiceUpdateDTOs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InvoiceApi.Controllers.InvoiceController",
+    "Method": "DeleteInvoice",
+    "RelativePath": "api/InvoiceController/id",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InvoiceApi.Controllers.InvoiceItemController",
+    "Method": "GetAllItems",
+    "RelativePath": "api/InvoiceItem",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[InvoiceApi.DTOs.InvoceItem.InvoceItemReadDtos, InvoiceApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceApi.Controllers.InvoiceItemController",
+    "Method": "CreateItems",
+    "RelativePath": "api/InvoiceItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "item",
+        "Type": "InvoiceApi.DTOs.InvoceItem.InvoiceItemCreateDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InvoiceApi.Controllers.InvoiceItemController",
+    "Method": "GetItemById",
+    "RelativePath": "api/InvoiceItem/id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "InvoiceApi.DTOs.InvoceItem.InvoceItemReadDtos",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "InvoiceApi.Controllers.InvoiceItemController",
+    "Method": "UpdateInvoiceItems",
+    "RelativePath": "api/InvoiceItem/id",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "item",
+        "Type": "InvoiceApi.DTOs.InvoceItem.InvoiceItemCreateDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "InvoiceApi.Controllers.InvoiceItemController",
+    "Method": "DeleteInvoiceItems",
+    "RelativePath": "api/InvoiceItem/id",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

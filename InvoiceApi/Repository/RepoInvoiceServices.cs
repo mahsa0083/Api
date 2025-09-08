@@ -5,44 +5,36 @@ using Microsoft.EntityFrameworkCore;
 
 namespace InvoiceApi.Repository
 {
-    public class RepoInvoiceServices :   IRepositoryInvoice
+    public class RepoInvoiceServices : IRepositoryInvoice 
     {
-      private  readonly InvoiceDataBase context;
+        private readonly InvoiceDataBase context;
         public RepoInvoiceServices(InvoiceDataBase context)
         {
             this.context = context;
         }
-      
-        #region Invoice
+
         public void CreateInvoice(Invoice invoice)
         {
-            if(invoice == null)
+            if (invoice == null)
             {
                 throw new ArgumentNullException("فاکتور خالی است");
             }
-
             
-             
-                 
-             
-
             context.invoices.Add(invoice);
+            
         }
         public void Delete(Invoice invoice)
         {
-            if ( invoice.Id==null|| invoice.Id==0)
+            if (invoice.Id == null || invoice.Id == 0)
             {
                 throw new ArgumentNullException("Compelet the Field ID");
             }
             context.invoices.Remove(invoice);
         }
-        public IEnumerable<Invoice> GetAll()
-        {
-            return context.invoices.ToList();
-        }
+       
         public Invoice GetById(int id)
         {
-            if (id == null || id==0)
+            if (id == null || id == 0)
             {
                 throw new ArgumentNullException("Please enter ID");
             }
@@ -50,7 +42,7 @@ namespace InvoiceApi.Repository
         }
         public void Update(Invoice invoice)
         {
-            if (invoice.Id==0||invoice.Id==null)
+            if (invoice.Id == 0 || invoice.Id == null)
             {
                 throw new ArgumentNullException("Please compelet the values");
             }
@@ -62,9 +54,7 @@ namespace InvoiceApi.Repository
             context.SaveChanges();
         }
 
-        #endregion
 
-        #region InvoiceItems
         public void CreateInvoice(InvoiceItem item)
         {
             if (item == null)
@@ -99,10 +89,10 @@ namespace InvoiceApi.Repository
             context.Entry(item).State = EntityState.Modified;
         }
 
-   
-
+        public List<Invoice> GetAll()
+        {
+            return context.invoices.ToList();
+        }
     }
-    #endregion
-
 
 }

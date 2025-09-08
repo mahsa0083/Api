@@ -28,6 +28,7 @@ internal class Program
         builder.Services.AddScoped<IRepositoryInvoice, RepoInvoiceServices>();
         builder.Services.AddScoped<IRepositoryInvoiceItem, RepoInvoiceItemService>();
 
+
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
       

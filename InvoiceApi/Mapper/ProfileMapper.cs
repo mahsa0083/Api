@@ -2,6 +2,7 @@
 using InvoiceApi.DTOs.InvoceItem;
 using InvoiceApi.DTOs.Invoice;
 using InvoiceApi.Modal.Entities;
+using InvoiceApi.Repository;
 namespace InvoiceApi.Mapper
 {
     public class ProfileMapper : Profile
@@ -10,6 +11,8 @@ namespace InvoiceApi.Mapper
         {
             CreateMap<Invoice, InvoiceReadDTOs>()
                   .ForMember(d => d.Id, opt => opt.Ignore());
+                  
+            
 
             CreateMap<Invoice, InvoiceCreateDTOs>()
                 .ForMember(d => d.Id, opt => opt.Ignore());
@@ -30,7 +33,8 @@ namespace InvoiceApi.Mapper
             CreateMap<InvoiceItem, InvoceItemUpdateDtos>().ReverseMap();
             CreateMap<InvoiceItem, InvoiceItemCreateDtos>().ReverseMap();
 
-
+            CreateMap<Invoice, InvoiceItem>().ReverseMap()
+                .ForMember(d=>d.Id , p=>p.MapFrom(src=>src.InvoiceId));
 
 
 
