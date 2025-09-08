@@ -1,4 +1,4 @@
-﻿using InvoiceApi.Modal.Entities;
+﻿using InvoiceApi.DataAccess.Entities;
 
 namespace InvoiceApi.Repository
 {

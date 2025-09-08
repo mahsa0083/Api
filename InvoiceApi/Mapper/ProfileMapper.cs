@@ -1,7 +1,10 @@
 ﻿using AutoMapper;
-using InvoiceApi.DTOs.InvoceItem;
-using InvoiceApi.DTOs.Invoice;
-using InvoiceApi.Modal.Entities;
+using InvoiceApi.Controllers.InvioceItem.DTOs;
+using InvoiceApi.Controllers.Invoice.Dtos;
+
+using InvoiceApi.DataAccess.Entities;
+
+
 using InvoiceApi.Repository;
 namespace InvoiceApi.Mapper
 {

@@ -5,6 +5,7 @@ E:\ilia\InvoiceApi\InvoiceApi\obj\Debug\net8.0\InvoiceApi.AssemblyInfo.cs
 E:\ilia\InvoiceApi\InvoiceApi\obj\Debug\net8.0\InvoiceApi.csproj.CoreCompileInputs.cache
 E:\ilia\InvoiceApi\InvoiceApi\obj\Debug\net8.0\InvoiceApi.MvcApplicationPartsAssemblyInfo.cs
 E:\ilia\InvoiceApi\InvoiceApi\obj\Debug\net8.0\InvoiceApi.MvcApplicationPartsAssemblyInfo.cache
+E:\ilia\InvoiceApi\InvoiceApi\obj\Debug\net8.0\InvoiceApi.sourcelink.json
 E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\appsettings.Development.json
 E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\appsettings.json
 E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\InvoiceApi.exe
@@ -12,8 +13,13 @@ E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\InvoiceApi.deps.json
 E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\InvoiceApi.runtimeconfig.json
 E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\InvoiceApi.dll
 E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\InvoiceApi.pdb
+E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\AutoMapper.dll
+E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\Azure.Core.dll
 E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\Azure.Identity.dll
+E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\FluentValidation.dll
+E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\Humanizer.dll
 E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -142,9 +148,3 @@ E:\ilia\InvoiceApi\InvoiceApi\obj\Debug\net8.0\refint\InvoiceApi.dll
 E:\ilia\InvoiceApi\InvoiceApi\obj\Debug\net8.0\InvoiceApi.pdb
 E:\ilia\InvoiceApi\InvoiceApi\obj\Debug\net8.0\InvoiceApi.genruntimeconfig.cache
 E:\ilia\InvoiceApi\InvoiceApi\obj\Debug\net8.0\ref\InvoiceApi.dll
-E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\AutoMapper.dll
-E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-E:\ilia\InvoiceApi\InvoiceApi\obj\Debug\net8.0\InvoiceApi.sourcelink.json
-E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\FluentValidation.dll
-E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
-E:\ilia\InvoiceApi\InvoiceApi\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
