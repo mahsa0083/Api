@@ -1,6 +1,0 @@
-@InvoiceApi_HostAddress = http://localhost:5237
-
-GET {{InvoiceApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
